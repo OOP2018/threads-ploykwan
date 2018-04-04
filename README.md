@@ -50,7 +50,7 @@ The threads use the counter to add and subtract values.
 ## 6. Analysis of Results
 
 - 6.1 AtomicLong for total is the fastest and Using ReentrantLock is the slowest.
-- 6.2 Synchronized, In complex program synchronized
+- 6.2 Synchronized because synchronized will lock only the method that user want. It flexible for complex program that user can choose what part in program that user want to lock.
 
 ## 7. Using Many Threads (optional)
 
