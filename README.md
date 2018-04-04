@@ -32,16 +32,16 @@ If two people withdraw the money from same account at the same time. For example
 
 ## 3. Counter with ReentrantLock
 
-3.1 The total always zero.
-3.2 Because use a ReentrantLock for lock another thread to access the counter when the counter was used.
-3.3 ReentrantLock will lock the counter when a thread1 use the counter so thread2 cann't access to the counter until the thread1 finish the state and unlock. And thread1 cann't access the counter when thread2 do an acqire. ReentrantLock would used when want to lock some statement in code.
-3.4 Because we have to unlock the counter for another thread.
+- 3.1 The total always zero.
+- 3.2 Because use a ReentrantLock for lock another thread to access the counter when the counter was used.
+- 3.3 ReentrantLock will lock the counter when a thread1 use the counter so thread2 cann't access to the counter until the thread1 finish the state and unlock. And thread1 cann't access the counter when thread2 do an acqire. ReentrantLock would used when want to lock some statement in code.
+- 3.4 Because we have to unlock the counter for another thread.
 
 ## 4. Counter with synchronized method
 
-4.1 The total always zero and runtime less than use a reentrant lock.
-4.2 Because use a synchronous for lock another thread to access the method when the method was used.
-4.3 Synchronized will lock the method when thread do acqire and another thread cann't do a work in the same time. Synchronized would used when want to lock all statement in method.
+- 4.1 The total always zero and runtime less than use a reentrant lock.
+- 4.2 Because use a synchronous for lock another thread to access the method when the method was used.
+- 4.3 Synchronized will lock the method when thread do acqire and another thread cann't do a work in the same time. Synchronized would used when want to lock all statement in method.
 
 ## 5. Counter with AtomicLong
 - 5.1 Because in AtomicLong class already thread safe.
