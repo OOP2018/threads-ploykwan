@@ -24,11 +24,11 @@ The threads use the counter to add and subtract values.
 
 ## 1. Using unsynchronized counter object
 
-It not always zero because two thread not finish each state in the same time, so it makes not thread not done in the same time. Sometime, total will be zero if two thread finish the process in the same time.
+- It not always zero because two thread not finish each state in the same time, so it makes not thread not done in the same time. Sometime, total will be zero if two thread finish the process in the same time.
 
 ## 2. Implications for Multi-threaded Applications
 
-If two people withdraw the money from same account at the same time. For example, If an account has 100 bath, while two people withdraw 100 bath from that account. Both of them recieve 100 bath and in account has remaining 0 bath.
+- If two people withdraw the money from same account at the same time. For example, If an account has 100 bath, while two people withdraw 100 bath from that account. Both of them recieve 100 bath and in account has remaining 0 bath.
 
 ## 3. Counter with ReentrantLock
 
