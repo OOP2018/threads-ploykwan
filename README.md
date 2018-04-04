@@ -24,7 +24,7 @@ The threads use the counter to add and subtract values.
 
 ## 1. Using unsynchronized counter object
 
-- It not always zero because two thread not finish each state in the same time, so it makes not thread not done in the same time. Sometime, total will be zero if two thread finish the process in the same time.
+- It not always zero because two thread use the same counter. Sometime thread1 finish before thread2 and return counter to update first, then thread2 update new counter too. Do it likes this again and again cloudn't make the counter be zero.
 
 ## 2. Implications for Multi-threaded Applications
 
