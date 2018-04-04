@@ -28,7 +28,7 @@ It not always zero because two thread not finish each state in the same time, so
 
 ## 2. Implications for Multi-threaded Applications
 
-How might this affect real applications?  
+If two people withdraw the money from same account at the same time. For example, If an account has 100 bath, while two people withdraw 100 bath from that account. Both of them recieve 100 bath and in account has remaining 0 bath.
 
 ## 3. Counter with ReentrantLock
 
@@ -44,13 +44,13 @@ How might this affect real applications?
 4.3 Synchronized will lock the method when thread do acqire and another thread cann't do a work in the same time. Synchronized would used when want to lock all statement in method.
 
 ## 5. Counter with AtomicLong
-5.1 Because in AtomicLong class already thread safe.
-5.2 AtomicLong make threads not use the same variable in the same time and we use it when in the class or program have all variables in type Long or Double or Integer.
+- 5.1 Because in AtomicLong class already thread safe.
+- 5.2 AtomicLong make threads not use the same variable in the same time and we use it when in the class or program have all variables in type Long or Double or Integer.
 
 ## 6. Analysis of Results
 
-6.1 AtomicLong for total is the fastest and Using ReentrantLock is the slowest.
-6.2 Synchronized 
+- 6.1 AtomicLong for total is the fastest and Using ReentrantLock is the slowest.
+- 6.2 Synchronized, In complex program synchronized
 
 ## 7. Using Many Threads (optional)
 
